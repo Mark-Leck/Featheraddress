@@ -3,9 +3,7 @@ Featheraddress
 
 JavaScript Client-Side Feathercoin Wallet Generator
 
-
 Featheraddress is a fork of the original bitaddress.org project https://github.com/pointbiz/bitaddress.org
-JavaScript Client-Side Feathercoin Wallet Generator
 
 Now Feathercoin addresses and their corresponding private key can be conveniently 
 generated in a web browser.
