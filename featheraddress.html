@@ -2633,7 +2633,7 @@ while (y.t < ys) y[y.t++] = 0;
 while (--j >= 0) {
 // Estimate quotient digit
 var qd = (r[--i] == y0) ? this.DM : Math.floor(r[i] * d1 + (r[i - 1] + e) * d2);
-if ((r[i] += y.am(0, qd, r, j, 0, ys)) < qd) {  // Try it out
+if ((r[i] += y.am(0, qd, r, j, 0, ys)) < qd) {        // Try it out
 y.dlShiftTo(j, t);
 r.subTo(t, r);
 while (r[i] < --qd) r.subTo(t, r);
@@ -5805,11 +5805,11 @@ transform-origin:top left; transform:rotate(-90deg);
 {
 #tagline { margin: 0 0 15px 0; font-style: italic; }
 .menu { text-align: left; }
-.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #6C8C6C;
+.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #cccccc;
 border: 2px solid green; padding: 5px; margin: 0 2px 0 0; position: relative; top: 2px; z-index: 110; cursor: pointer; }
-.menu .tab:hover { color: #FFF; }
-.menu .tab.selected { background-color: #FFF; border-bottom: 2px solid #FFF; cursor: default; }
-.menu .tab.selected:hover { color: #000; }
+.menu .tab:hover { color: #229faa; }
+.menu .tab.selected { background-color: #229faa; border-bottom: 2px solid #229faa; cursor: default; }
+.menu .tab.selected:hover { color: #229faa; }
 .pagebreak { height: 50px; }
 .commands { border-bottom: 2px solid green; padding: 10px 0; margin-bottom: 0; }
 .commands span { padding: 0 10px; }
