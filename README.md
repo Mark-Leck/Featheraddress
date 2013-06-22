@@ -1,4 +1,4 @@
-Featheraddress
+Featheraddress http://host.feathercoin.com/Featheraddress/featheraddress.html
 ==============
 
 JavaScript Client-Side Feathercoin Wallet Generator
