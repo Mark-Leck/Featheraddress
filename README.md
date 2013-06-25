@@ -9,7 +9,7 @@ Now Feathercoin addresses and their corresponding private key can be convenientl
 generated in a web browser.
 
 Link to working website using this source:
-http://host.feathercoin.com/Featheraddress/featheraddress.html
+http://featheraddress.org
 
 The bitaddress.org project provides an all-in-one HTML document with embedded
 JavaScript/Css/Images. The JavaScript is readable not minified and contains no
