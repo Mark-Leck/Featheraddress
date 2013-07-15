@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <!--
@@ -2857,7 +2856,7 @@ if ("number" == typeof b) {
 if (a < 2) this.fromInt(1);
 else {
 this.fromNumber(a, c);
-if (!this.testBit(a - 1))	// force MSB set
+if (!this.testBit(a - 1))        // force MSB set
 this.bitwiseTo(BigInteger.ONE.shiftLeft(a - 1), op_or, this);
 if (this.isEven()) this.dAddOffset(1, 0); // force odd
 while (!this.isProbablePrime(b)) {
@@ -5069,7 +5068,7 @@ this.priv = BigInteger.fromByteArrayUnsigned(bytes);
 this.compressed = (this.compressed == undefined) ? !!ECKey.compressByDefault : this.compressed;
 };
 
-ECKey.privateKeyPrefix = 0xb0; // mainnet 0xb0 testnet 0xEF
+ECKey.privateKeyPrefix = 0x8E; // mainnet 0xb0 testnet 0xEF
 
 /**
 * Whether public keys should be returned compressed by default.
@@ -5253,18 +5252,19 @@ key = key.toString();
 return /^[A-Fa-f0-9]{64}$/.test(key);
 };
 
-// 51 characters base58, always starts with a '6'
-ECKey.isWalletImportFormat = function (key) {
-key = key.toString();
-return (ECKey.privateKeyPrefix == 0xb0) ?
-(/^6[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
-(/^9[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key));
-};
+// 51 characters base58, always starts with a '5'
+			ECKey.isWalletImportFormat = function (key) {
+				key = key.toString();
+				return (ECKey.privateKeyPrefix == 0x8E) ?
+							(/^5[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
+							(/^9[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key));
+			};
+
 
 // 52 characters base58
 ECKey.isCompressedWalletImportFormat = function (key) {
 key = key.toString();
-return (ECKey.privateKeyPrefix == 0xb0) ?
+return (ECKey.privateKeyPrefix == 0x8E) ?
 (/^T[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
 (/^c[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key));
 };
@@ -7998,6 +7998,7 @@ setTimeout(ninja.seeder.forceGenerate, ninja.seeder.seedLimit * 20);
 </script>
 </body>
 </html>
+
 
 
 
